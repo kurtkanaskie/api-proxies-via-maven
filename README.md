@@ -12,7 +12,7 @@ Demonstration of Apigee API proxies managed, configured and tested using Apigeet
 - [ ] [Install Apigeetool](https://github.com/apigee/apigeetool-node) ```npm install -g apigeetool```
 
 - [ ] Clone this repo https://github.com/kurtkanaskie/api-proxies-via-maven
-- [ ] ```cd forecastapi``` and execute ```mvn install -Ptest -Dusername={your-username} -Dpassword={your-password} -Dorg={your-org-name}```
+- [ ] ```cd forecastapi``` and execute ```mvn install -Ptest -Dusername={your-un} -Dpassword={your-pw} -Dorg={your-org-name}```
 
 If everything ran OK, you will see BUILD SUCCESS message at the end of the output, after lots of info on the first run.
 
@@ -29,7 +29,7 @@ As an API developer, I made changes to my apiproxy in Management Console and I w
 	* Manual changes in Management Console (with our without a new revision)
 - Update local repository
 	* Create a GitHub branch ```git branch ...```
-	* Fetch the proxy ```apigeetool fetchproxy -u your-username -o your-org -n forecastapi -r 1 -f apiproxy-changed.zip```
+	* Fetch the proxy ```apigeetool fetchproxy -u your-un -o your-org -n forecastapi -r 1 -f apiproxy-changed.zip```
 	* Unzip and compare changes ```sdiff apiproxy apiproxy-changed```
 - Test the changes
 	- Test the changes ```mvn jmeter:jmeter ...```
