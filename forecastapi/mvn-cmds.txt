@@ -1,0 +1,2 @@
+mvn install -Ptest -Dusername=your.name@email.com -Dpassword=secret-value
+mvn jmeter:jmeter -Ptest -Dusername=your.name@email.com -Dpassword=secret-value -DtestData=forecastapi_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2
