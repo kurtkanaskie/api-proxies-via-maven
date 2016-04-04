@@ -12,14 +12,13 @@ Demonstration of Apigee API proxies managed, configured and tested using Apigeet
 - [ ] [Install Apigeetool](https://github.com/apigee/apigeetool-node) ```npm install -g apigeetool```
 
 - [ ] Clone this repo https://github.com/kurtkanaskie/api-proxies-via-maven
-- [ ] ```cd forecastapi``` 
-- [ ] Execute ```mvn install -Ptest -Dusername={your-username} -Dpassword={your-password} -Dorg={your-org-name}```
+- [ ] ```cd forecastapi``` and execute ```mvn install -Ptest -Dusername={your-username} -Dpassword={your-password} -Dorg={your-org-name}```
 
 If everything ran OK, you will see BUILD SUCCESS message at the end of the output, after lots of info on the first run.
 
 If the tests don't run correctly check the files in the tests directory for your API endpoints.
 
-Next steps, See [README-maven](https://github.com/kurtkanaskie/api-proxies-via-maven/README-maven.md) for more details.
+Next steps, See [README-maven](https://github.com/kurtkanaskie/api-proxies-via-maven/blob/master/README-maven.md) for more command details.
 
 ## Use Cases
 

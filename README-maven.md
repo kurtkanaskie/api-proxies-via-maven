@@ -1,26 +1,26 @@
 # README Maven
 
-##Basic Commands – apigee.options
+###Basic Commands – apigee.options
 
-###Configure, package, import, deploy, and test bundle (default validate apigee.option) – Creates new revision
+#####Configure, package, import, deploy, and test bundle (default validate apigee.option) – Creates new revision
 
 ```mvn install -Ptest -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name```
 
-###Configure, package, import, override, deploy, and test bundle (default validate apigee.option) – Overrides current revision
+#####Configure, package, import, override, deploy, and test bundle (default validate apigee.option) – Overrides current revision
 
 ```mvn install -Ptest -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name -Doptions=validate,update```
 
-###Delete current bundle deployed
+#####Delete current bundle deployed
 
 ```mvn install -Ptest -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name -Doptions=clean```
 
 ```mvn install -Ptest -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name -Doptions=inactive```
 
-###Configure and package bundle. Does not import
+#####Configure and package bundle. Does not import
 
 ```mvn package -Ptest -Dusername=$ae_username -Dpassword=$ae_password -Dorg=your-org-name```
 
-###Run tests only
+#####Run tests only
 
 ```mvn jmeter:jmeter -Ptest -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name -DtestData=forecastapi_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2```
 
