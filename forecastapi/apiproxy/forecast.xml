@@ -2,6 +2,6 @@
 <APIProxy revision="1" name="forecastweatherapi">
     <ConfigurationVersion minorVersion="0" majorVersion="4"/>
     <CreatedBy>Kanaskie</CreatedBy>
-    <Description>Forecast Weather API</Description>
+    <Description>Forecast Weather API using new Yahoo backend</Description>
     <DisplayName>forecastapi</DisplayName>
 </APIProxy>

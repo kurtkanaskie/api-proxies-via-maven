@@ -40,7 +40,7 @@ As an API developer, I made changes to my apiproxy in Management Console and I w
 ### Code driven changes in local repository
 As an API developer, I made changes to my apiproxy in my local repository and in GitHub and I want to move into Apigee.
 - [ ] Create a GitHub branch ```git branch ...```
-- [ ] Make changes to the proxy, install and test ```mvn install -Ptest ...```
+- [ ] Make changes to the proxy and deploy ```mvn deploy -P test ...```
 - [ ] Make additional test cases and test ```mvn jmeter:jmeter ...```
 
 

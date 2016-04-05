@@ -1,2 +1,4 @@
-mvn install -Ptest -Dusername=your.name@email.com -Dpassword=secret-value
-mvn jmeter:jmeter -Ptest -Dusername=your.name@email.com -Dpassword=secret-value -DtestData=forecastapi_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2
+mvn install -P test -Dusername=your.name@email.com -Dpassword=secret-value
+mvn apigee-enterprise:deploy -P test -Dusername=your.name@email.com -Dpassword=secret-value
+mvn jmeter:jmeter -P test -DtestData=forecastapi_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2
+mvn jmeter:jmeter -P prod -DtestData=forecastapi_prod.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2
