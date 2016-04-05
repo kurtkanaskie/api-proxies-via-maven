@@ -5,8 +5,8 @@ Demonstration of Apigee API proxies managed, configured and tested using Apigeet
 * forecastapi (Weather API proxy, modified to use new backend URL).
 
 ## Getting Started
-- [ ] [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). Not required if already provided.
-- [ ] [Sign up for GitHub account and install Git](https://github.com). Not required if already provided.
+- [ ] [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). If not already.
+- [ ] [Sign up for GitHub account and install Git](https://github.com). If not already.
 
 - [ ] [Download and install Maven 3.0.*](http://maven.apache.org/download.cgi)
 - [ ] [Install Apigeetool](https://github.com/apigee/apigeetool-node) ```npm install -g apigeetool```
