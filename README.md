@@ -3,6 +3,7 @@ Demonstration of Apigee API proxies managed, configured and tested using Apigeet
 
 ## APIs Examples
 * forecastapi (Weather API proxy, modified to use new backend URL).
+* backend-analytics (Node.js API proxy showing example of how to create custom analytics).
 
 ## Getting Started
 - [ ] [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). If not already.
