@@ -1,0 +1,76 @@
+{
+    "configurations": [
+        {
+            "name": "test",
+            "policies": [
+                {
+                    "name": "AM-remove-backend-system.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='X-Environment']",
+                            "value": "TEST"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/backend-analytics"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/ScriptTarget/ResourceURL",
+                            "value": "node://api-test.js"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "prod",
+            "policies": [
+                {
+                    "name": "AM-remove-backend-system.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/AssignMessage/Set/Headers/Header[@name='X-Environment']",
+                            "value": "PROD"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/backend-analytics"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/ScriptTarget/ResourceURL",
+                            "value": "node://api.js"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
