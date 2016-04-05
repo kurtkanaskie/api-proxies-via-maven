@@ -2,7 +2,7 @@
 Demonstration of Apigee API proxies managed, configured and tested using Apigeetool, Maven and Github.
 
 ## APIs Examples
-* forecastapi (Original API proxy example, modified to use new weather API backend).
+* forecastapi (Weather API proxy, modified to use new backend URL).
 
 ## Getting Started
 - [ ] [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). Not required if already provided.
