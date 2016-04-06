@@ -6,25 +6,23 @@ Demonstration of Apigee API proxies managed, configured and tested using Apigeet
 * backend-analytics (Node.js API proxy showing example of how to create custom analytics).
 
 ## Getting Started
-- [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). If not already.
-- [Sign up for GitHub account and install Git](https://github.com). If not already.
+* [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). If needed.
+* [Sign up for GitHub account and install Git](https://github.com). If needed.
 
-- [Download and install Maven 3.0.*](http://maven.apache.org/download.cgi)
-- [Install Apigeetool](https://github.com/apigee/apigeetool-node) ```npm install -g apigeetool```
+* [Download and install Maven 3.0.*](http://maven.apache.org/download.cgi). If needed.
+* [Install Apigeetool](https://github.com/apigee/apigeetool-node) ```npm install -g apigeetool```. If needed.
 
-- Clone this repo https://github.com/kurtkanaskie/api-proxies-via-maven
-- ```cd forecastapi``` and execute ```mvn install -P test -Dusername={your-un} -Dpassword={your-pw} -Dorg={your-org-name}```
+* Clone this repo https://github.com/kurtkanaskie/api-proxies-via-maven
+* ```cd forecastapi``` and execute ```mvn install -P test -Dusername={your-un} -Dpassword={your-pw} -Dorg={your-org-name}```
 
 If everything ran OK, you will see BUILD SUCCESS message at the end of the output, after lots of info on the first run.
 
 If the tests don't run correctly check the files in the tests directory for your API endpoints.
 
-Next steps, See [README-maven](https://github.com/kurtkanaskie/api-proxies-via-maven/blob/master/README-maven.md) for more command details.
-
 ## Use Cases
 
 ### UI driven changes in Apigee Management Console
-As an API developer, I made changes to my apiproxy in Management Console and I want to save my changes to GitHub without branching.
+As an API developer, I made changes to my apiproxy in the Management Console and I want to save my changes to GitHub without branching.
 
 - Changes
 	* Manual changes in Management Console (with our without a new revision)
@@ -32,9 +30,10 @@ As an API developer, I made changes to my apiproxy in Management Console and I w
 	* Test the changes ```mvn jmeter:jmeter ...```
 	* Deploy any additional changes to Apigee ```mvn install or update ...```
 - Update local repository
-	* Create a GitHub branch ```git branch ...```
+	* cp -pr apiproxy apiproxy-prev
 	* Fetch the proxy ```apigeetool fetchproxy -u your-un -o your-org -n forecastapi -r 1 -f apiproxy-changed.zip```
-	* Unzip and compare changes ```sdiff apiproxy apiproxy-changed```
+	* Unzip ```unzip apiproxy-changed.zip```
+	* Compare changes ```git diff``` or ```sdiff apiproxy-prev apiproxy```
 - Update Git repository
 	* Commit the changes ```git commit -am ...; git push```
 
