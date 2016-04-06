@@ -51,7 +51,7 @@ As an API developer, I want to make changes to my apiproxy in my local repositor
 NOTE: -Dusername -Dpassword -Dorg can be configured in shared_pom.xml so they don't need to be set on the command line each time.
 
 #####Configure, package, import, deploy, and test bundle (default validate apigee.option) – Creates new revision
-```mvn install -P test -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name``` (these can be configured in shared_pom.xml)
+```mvn install -P test -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name``` 
 
 #####Configure, package, import, override, deploy, and test bundle (default validate apigee.option) – Overrides current revision
 ```mvn install -P test -Doptions=validate,update```
