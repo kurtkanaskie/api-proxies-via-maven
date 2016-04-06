@@ -8,10 +8,8 @@ Demonstration of Apigee API proxies managed, configured and tested using Apigeet
 ## Getting Started
 * [Sign up for an Apigee Account!](https://accounts.apigee.com/accounts/sign_up). If needed.
 * [Sign up for GitHub account and install Git](https://github.com). If needed.
-
 * [Download and install Maven 3.0.*](http://maven.apache.org/download.cgi). If needed.
 * [Install Apigeetool](https://github.com/apigee/apigeetool-node) ```npm install -g apigeetool```. If needed.
-
 * Clone this repo https://github.com/kurtkanaskie/api-proxies-via-maven
 * ```cd forecastapi``` and execute ```mvn install -P test -Dusername={your-un} -Dpassword={your-pw} -Dorg={your-org-name}```
 
