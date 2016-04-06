@@ -24,7 +24,7 @@ Next steps, See [README-maven](https://github.com/kurtkanaskie/api-proxies-via-m
 ## Use Cases
 
 ### UI driven changes in Apigee Management Console
-As an API developer, I made changes to my apiproxy in Management Console and I want to save my changes to GitHub.
+As an API developer, I made changes to my apiproxy in Management Console and I want to save my changes to GitHub without branching.
 
 - Changes
 	* Manual changes in Management Console (with our without a new revision)
@@ -39,36 +39,32 @@ As an API developer, I made changes to my apiproxy in Management Console and I w
 	* Commit the changes ```git commit -am ...; git push```
 
 ### Code driven changes in local repository
-As an API developer, I want to make changes to my apiproxy in my local repository and GitHub and then move into Apigee.
+As an API developer, I want to make changes to my apiproxy in my local repository via GitHub branch and sync with Apigee.
 - Create a GitHub branch ```git branch branchname ...; git checkout branchname```
 - Make changes to the proxy and deploy ```mvn install -P test ...```
 - Make additional test cases and test ```mvn jmeter:jmeter ...```
-- Commit to Github ```git commit ...; git push```
-- Merck with master ``` git checkout master; git merge branchame```
+- Commit to Github ```git commit ...; git push --set-upstream origin branchname```
+- Merck with master ``` git checkout master; git merge branchame; git push```
 
 
 ##Some Maven Commands – apigee.options
 
-#####Configure, package, import, deploy, and test bundle (default validate apigee.option) – Creates new revision
+NOTE: -Dusername -Dpassword -Dorg can be configured in shared_pom.xml so they don't need to be set on the command line each time.
 
+#####Configure, package, import, deploy, and test bundle (default validate apigee.option) – Creates new revision
 ```mvn install -P test -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name``` (these can be configured in shared_pom.xml)
 
 #####Configure, package, import, override, deploy, and test bundle (default validate apigee.option) – Overrides current revision
-
 ```mvn install -P test -Doptions=validate,update```
 
 #####Delete current bundle deployed
-
 ```mvn install -P test -Doptions=clean```
-
 ```mvn install -P test -Doptions=inactive```
 
 #####Configure and package bundle. Does not import
-
 ```mvn package -P test```
 
 #####Run tests only
-
 ```mvn jmeter:jmeter -P test -name -DtestData=forecastapi_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2```
 
 
