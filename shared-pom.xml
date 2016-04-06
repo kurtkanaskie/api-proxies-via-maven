@@ -99,15 +99,15 @@
             <id>test</id>
             <properties>
                 <org>kurtkanaskie</org>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg kurtkanaskie -->
-                <options>validate</options>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg kurtkanaskie -->
+                <options>validate</options>  <!-- default options -->
                 <apigee.profile>test</apigee.profile>
                 <apigee.env>test</apigee.env>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
-                <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>${org}</apigee.org>
-                <apigee.username>${username}</apigee.username>
-                <apigee.password>${password}</apigee.password>
-                <apigee.options>${options}</apigee.options>
+                <apigee.apiversion>v1</apigee.apiversion> <!-- Kurt - what is this for? -->
+                <apigee.org>${org}</apigee.org> <!-- Kurt - what is this for? -->
+                <apigee.username>kurt.kanaskie@gmail.com</apigee.username>
+                <apigee.password>Fuffy2013</apigee.password>
+                <apigee.options>${options}</apigee.options> <!-- Kurt - what is this for? -->
                 <apigee.revision>${revision}</apigee.revision> <!-- used while trying to update revision, use when option=update only -->
                 <!--apigee.override.delay>10</apigee.override.delay-->
                 <!--apigee.delay>1000</apigee.delay-->
@@ -117,15 +117,15 @@
             <id>prod</id>
             <properties>
                 <org>kurtkanaskie</org>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg kurtkanaskie -->
-                <options>validate</options>  <!-- default org, replace with default org to avoid passing parameter e.g. -Dorg kurtkanaskie -->
+                <options>validate</options>  <!-- default options -->
                 <apigee.profile>prod</apigee.profile>
                 <apigee.env>prod</apigee.env>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
-                <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>${org}</apigee.org>
-                <apigee.username>${username}</apigee.username>
-                <apigee.password>${password}</apigee.password>
-                <apigee.options>${options}</apigee.options>
+                <apigee.apiversion>v1</apigee.apiversion> <!-- Kurt - what is this for? -->
+                <apigee.org>${org}</apigee.org> <!-- Kurt - what is this for? -->
+                <apigee.username>kurt.kanaskie@gmail.com</apigee.username>
+                <apigee.password>Fuffy2013</apigee.password>
+                <apigee.options>${options}</apigee.options> <!-- Kurt - what is this for? -->
                 <apigee.revision>${revision}</apigee.revision> <!-- used while trying to update revision, use when option=update only -->
                 <!--apigee.override.delay>10</apigee.override.delay-->
                 <!--apigee.delay>1000</apigee.delay-->

@@ -16,11 +16,11 @@
 Download the API bundle, as per above.
 
 * ```mvn install -P test -Dusername=your.name@email.com -Dpassword=secret-value``` (install and test)
-* ```mvn deploy -P test -Dusername=your.name@email.com -Dpassword=secret-value``` (just deploy)
+* ```mvn install -P prod -Doptions=inactive``` (just install, don't deploy)
+* ```mvn apigee-enterprise:deploy -P test -Dusername=your.name@email.com -Dpassword=secret-value``` (just deploy)
+
 * ```mvn jmeter:jmeter -P test -DtestData=backend-analytics_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2``` (test in test)
 * ```mvn jmeter:jmeter -P prod -DtestData=backend-analytics_prod.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2``` (test in prod)
-* ```mvn deploy -P prod (deploy - seems to work but throws error)
-* ```mvn install -P prod -Doptions=inactive
 
 ###To test node locally
 * ```cd apiproxy/resources/node```
