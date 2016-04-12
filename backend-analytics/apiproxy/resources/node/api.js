@@ -33,25 +33,34 @@ router.get('/', function(req, res) {
 });
 
 router.get('/ping', function(req, res) {
-	res.status(200).send({response:'backend-analytics pong'});
+    setTimeout(function() {
+	    res.status(200).send({response:'backend-analytics pong'});
+    }, 1000);
 });
 router.get('/status', function(req, res) {
 	res.status(200).send({response:'backend-analytics API is running'});
 });
 
 router.get('/server1', function(req, res) {
-    res.set('X-Backend-System', 'Server1');
+    res.set('X-Backend-System', 'NewBackend-1');
 	res.status(200).send( {response:'Server 1'});
 });
 
 router.get('/server2', function(req, res) {
-    res.set('X-Backend-System', 'Server2');
-	res.status(200).send( {response:'Server 2'});
+    setTimeout(function() {
+        console.log('Delayed 0.5 second');
+        res.set('X-Backend-System', 'NewBackend-2');
+	    res.status(200).send( {response:'Server 2'});
+    }, 500);
 });
 
 router.get('/server3', function(req, res) {
-    res.set('X-Backend-System', 'Server3');
-	res.status(200).send( {response:'Server 3'});
+    setTimeout(function() {
+        console.log('Delayed 1 second');
+        res.set('X-Backend-System', 'NewBackend-3');
+	    res.status(200).send( {response:'Server 3'});
+    }, 1000);
+    
 });
 
 app.all('*', function(req, res) {

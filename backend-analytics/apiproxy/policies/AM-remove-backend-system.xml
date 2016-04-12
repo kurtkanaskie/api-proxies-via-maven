@@ -4,7 +4,8 @@
     <Properties/>
     <Set>
         <Headers>
-            <Header name="X-Environment">NO_ENVIRONMENT</Header>
+            <!-- For debugging, to verify its set -->
+            <Header name="X-TargetURL">{target.url}</Header>
         </Headers>
     </Set>
     <Remove>
