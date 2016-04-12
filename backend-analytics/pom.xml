@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!--
 
     Copyright (C) 2014 Apigee Corporation
@@ -15,55 +16,53 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>parent-pom</artifactId>
         <groupId>apigee</groupId>
         <version>1.0</version>
         <relativePath>../shared-pom.xml</relativePath>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>apigee</groupId>
     <artifactId>backend-analytics</artifactId>
     <version>1.0</version>
     <name>backend-analytics</name>
     <packaging>pom</packaging>
-<!-- begin optional tests -->
+    <!-- begin optional tests -->
     <profiles>
         <profile>
             <id>test</id>
             <build>
-              <plugins>
-                <plugin>
-                    <groupId>com.lazerycode.jmeter</groupId>
-                    <artifactId>jmeter-maven-plugin</artifactId>
-                    <version>1.8.1</version>
-                    <executions>
-                        <execution>
-                            <id>jmeter-tests</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>jmeter</goal>
-                            </goals>
-                            <configuration>
-                                <skipTests>${skipTests}</skipTests>
-                                <ignoreResultFailures>true</ignoreResultFailures>
-                                <suppressJMeterOutput>false</suppressJMeterOutput>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>1.8.1</version>
+                        <executions>
+                            <execution>
+                                <id>jmeter-tests</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>jmeter</goal>
+                                </goals>
+                                <configuration>
+                                    <skipTests>${skipTests}</skipTests>
+                                    <ignoreResultFailures>true</ignoreResultFailures>
+                                    <suppressJMeterOutput>false</suppressJMeterOutput>
                                     <propertiesUser>
                                         <testData>backend-analytics_test.csv</testData>
                                         <threadNum>5</threadNum>
                                         <rampUpPeriodSecs>5</rampUpPeriodSecs>
                                         <loopCount>2</loopCount>
                                     </propertiesUser>
-                            </configuration>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <testFilesDirectory>tests</testFilesDirectory>
-                        <testResultsTimestamp>false</testResultsTimestamp>
-                    </configuration>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <testFilesDirectory>tests</testFilesDirectory>
+                            <testResultsTimestamp>false</testResultsTimestamp>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
@@ -71,40 +70,39 @@
         <profile>
             <id>prod</id>
             <build>
-              <plugins>
-                <plugin>
-                    <groupId>com.lazerycode.jmeter</groupId>
-                    <artifactId>jmeter-maven-plugin</artifactId>
-                    <version>1.8.1</version>
-                    <executions>
-                        <execution>
-                            <id>jmeter-tests</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>jmeter</goal>
-                            </goals>
-                            <configuration>
-                                <skipTests>${skipTests}</skipTests>
-                                <ignoreResultFailures>true</ignoreResultFailures>
-                                <suppressJMeterOutput>false</suppressJMeterOutput>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>1.8.1</version>
+                        <executions>
+                            <execution>
+                                <id>jmeter-tests</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>jmeter</goal>
+                                </goals>
+                                <configuration>
+                                    <skipTests>${skipTests}</skipTests>
+                                    <ignoreResultFailures>true</ignoreResultFailures>
+                                    <suppressJMeterOutput>false</suppressJMeterOutput>
                                     <propertiesUser>
                                         <testData>backend-analytics_prod.csv</testData>
                                         <threadNum>5</threadNum>
                                         <rampUpPeriodSecs>5</rampUpPeriodSecs>
                                         <loopCount>2</loopCount>
                                     </propertiesUser>
-                            </configuration>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <testFilesDirectory>tests</testFilesDirectory>
-                        <testResultsTimestamp>false</testResultsTimestamp>
-                    </configuration>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <testFilesDirectory>tests</testFilesDirectory>
+                            <testResultsTimestamp>false</testResultsTimestamp>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
-
         </profile>
     </profiles>
-<!-- end optional tests -->
+    <!-- end optional tests -->
 </project>
