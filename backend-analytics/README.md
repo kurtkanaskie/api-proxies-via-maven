@@ -15,6 +15,7 @@
 #####Maven
 Download the API bundle, as per above.
 
+* ```mvn package -P test -Dusername=your.name@email.com -Dpassword=secret-value``` (just package)
 * ```mvn install -P test -Dusername=your.name@email.com -Dpassword=secret-value``` (install and test)
 * ```mvn install -P prod -Doptions=inactive -DskipTests=true``` (just install, don't deploy, and don't test)
 * ```mvn install -P prod -Doptions=inactive,update -DskipTests=true``` (update the version in prod)

@@ -48,6 +48,9 @@ As an API developer, I want to make changes to my apiproxy in my local repositor
 
 NOTE: -Dusername -Dpassword -Dorg can be configured in shared_pom.xml so they don't need to be set on the command line each time.
 
+#####Package test bundle (default validate apigee.option) – Creates zipfile locally
+```mvn install -P test -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name``` 
+
 #####Configure, package, import, deploy, and test bundle (default validate apigee.option) – Creates new revision
 ```mvn install -P test -Dusername=your-username -Dpassword=your-password -Dorg=your-org-name``` 
 
@@ -65,7 +68,7 @@ NOTE: -Dusername -Dpassword -Dorg can be configured in shared_pom.xml so they do
 ```mvn jmeter:jmeter -P test -name -DtestData=forecastapi_test.csv -DthreadNum=5 -DrampUpPeriodSecs=5 -DloopCount=2```
 
 
-###The following are available options:
+###The following are available "options":
 * clean - This will delete the last deployed revision in an environment.
 * validate - This will validate a bundle before importing. Thus if you want strict validation then its required.
 * inactive - This will just import the bundle without activating the bundle.

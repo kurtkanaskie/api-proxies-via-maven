@@ -93,7 +93,7 @@
                         <validationSet>
                             <dir>apiproxy/targets</dir>
                         </validationSet>
-                        <!-- This doesnt work, always picks up resources and JS files, no way to check apiproxy/*.xml -->
+                        <!-- This doesnt seem to work, always picks up resources and JS files, no way to check apiproxy/*.xml -->
                         <!--
                         <validationSet>
                             <dir>apiproxy</dir>
@@ -158,9 +158,9 @@
                 <apigee.env>test</apigee.env>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>${org}</apigee.org>
-                <apigee.username>YOUR.NAME@email.com</apigee.username>
-                <apigee.password>YOURPASSWORD</apigee.password>
+                <apigee.org>kurtkanaskie</apigee.org>
+                <apigee.username>${username}</apigee.username>
+                <apigee.password>${password}</apigee.password>
                 <apigee.options>${options}</apigee.options>
                 <apigee.revision>${revision}</apigee.revision>
                 <!-- used while trying to update revision, use when option=update only -->
@@ -175,9 +175,9 @@
                 <apigee.env>prod</apigee.env>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>${org}</apigee.org>
-                <apigee.username>YOUR.NAME@email.com</apigee.username>
-                <apigee.password>YOURPASSWORD</apigee.password>
+                <apigee.org>kurtkanaskie</apigee.org>
+                <apigee.username>${username}</apigee.username>
+                <apigee.password>${password}</apigee.password>
                 <apigee.options>${options}</apigee.options>
                 <apigee.revision>${revision}</apigee.revision>
                 <!-- used while trying to update revision, use when option=update only -->
