@@ -3,7 +3,7 @@
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1460141181858</CreatedAt>
     <CreatedBy>kurt.kanaskie@gmail.com</CreatedBy>
-    <Description>Demonstration of custom analytics from backend systems. Consolidated timing data to all messages.</Description>
+    <Description>Demonstration of custom analytics from backend systems. Consolidated timing data to all messages. Updated with this message.</Description>
     <DisplayName>backend-analytics</DisplayName>
     <LastModifiedAt>1460409056687</LastModifiedAt>
     <LastModifiedBy>kurt.kanaskie@gmail.com</LastModifiedBy>
